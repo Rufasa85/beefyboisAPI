@@ -5,12 +5,14 @@ const mongoose = require('mongoose');
 // const exphbs = require('express-handlebars');
 const PORT = process.env.PORT || 3000;
 require('dotenv').config();
+const cors = require('cors');
  
 // app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 // app.set('view engine', 'handlebars');
  
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors());
 mongoose.connect("mongodb://localhost/beefbeefbeefyboiz", { useNewUrlParser: true });
 // app.use('/', express.static(__dirname + '/static'));
  
@@ -59,11 +61,5 @@ app.post('/reviews', (req,res)=>{
     else res.send('incorrect password');
 })
 
-app.post('/', (req,res)=>{
-    if(req.body.password === process.env.PASSWORD) {
-        res.send('noice')
-    }
-    else res.send('fail')
-})
 
 app.listen(PORT);
