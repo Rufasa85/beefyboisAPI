@@ -1,0 +1,24 @@
+{
+  "name": "beefyboisapi",
+  "version": "1.0.0",
+  "description": "API for beefy bois 2.0 site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rufasa85/beefyboisAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rufasa85/beefyboisAPI/issues"
+  },
+  "homepage": "https://github.com/Rufasa85/beefyboisAPI#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.9"
+  }
+}
